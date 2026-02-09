@@ -12,12 +12,12 @@
 
 **DevForge AI** is a full-stack AI development assistant built for the **Google Gemini Hackathon 2026**. It helps developers design, review, and document production-ready applications in seconds using the power of Gemini.
 
-[Live Demo](https://chatgpt.com/) · [Report Bug](https://github.com/yourusername/devforge-ai/issues) · [Request Feature](https://github.com/yourusername/devforge-ai/issues)
+[Live Demo](https://chatgpt.com/) 
 
 ---
 
 <!-- Replace `yourusername` and the image file name/path with your real ones -->
-<img src="https://raw.githubusercontent.com/yourusername/devforge-ai/main/public/devforge-ai-preview.png" alt="DevForge AI Preview" width="90%" />
+<img src="https://drive.google.com/file/d/1xSadJW1QzcKsPxe-bpb6nRHQD_iEbpAL/view?usp=sharing" alt="DevForge AI Preview" width="90%" />
 
 </div>
 
