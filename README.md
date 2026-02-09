@@ -17,7 +17,7 @@
 ---
 
 <!-- Replace `yourusername` and the image file name/path with your real ones -->
-<img src="https://drive.google.com/file/d/1xSadJW1QzcKsPxe-bpb6nRHQD_iEbpAL/view?usp=sharing" alt="DevForge AI Preview" width="90%" />
+
 
 </div>
 
