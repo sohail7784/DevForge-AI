@@ -16,7 +16,8 @@
 
 ---
 
-<img src="https://raw.githubusercontent.com/yourusername/devforge-ai/main/public/preview.png" alt="DevForge AI Preview" width="90%" />
+<!-- Replace `yourusername` and the image file name/path with your real ones -->
+<img src="https://raw.githubusercontent.com/yourusername/devforge-ai/main/public/devforge-ai-preview.png" alt="DevForge AI Preview" width="90%" />
 
 </div>
 
@@ -25,7 +26,7 @@
 ## 📋 Table of Contents
 
 - [Features](#-features)
-- [Tech Stack](#%EF%B8%8F-tech-stack)
+- [Tech Stack](#-tech-stack)
 - [Architecture](#-architecture)
 - [Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
@@ -93,67 +94,76 @@
 
 ## ⚙️ Tech Stack
 
-| Layer        | Technology                          |
-| ------------ | ----------------------------------- |
-| **Framework**| Next.js 14 (App Router)             |
-| **Frontend** | React 18, Tailwind CSS 3.4          |
-| **Language** | TypeScript 5                        |
-| **State**    | Zustand                             |
-| **AI**       | Google Gemini 2.5 Flash API         |
-| **Backend**  | Next.js API Routes                  |
-| **Preview**  | CodeSandbox API (Live Embed)        |
-| **Styling**  | Tailwind CSS + Custom Animations    |
-| **Deployment** | Vercel                            |
+| Layer          | Technology                        |
+| ------------- | --------------------------------- |
+| **Framework** | Next.js 14 (App Router)           |
+| **Frontend**  | React 18, Tailwind CSS 3.4        |
+| **Language**  | TypeScript 5                      |
+| **State**     | Zustand                           |
+| **AI**        | Google Gemini 2.5 Flash API       |
+| **Backend**   | Next.js API Routes                |
+| **Preview**   | CodeSandbox API (Live Embed)      |
+| **Styling**   | Tailwind CSS + Custom Animations  |
+| **Deployment**| Vercel                            |
 
 ---
 
 ## 🏛 Architecture
 
+```text
 ┌──────────────┬────────────────────────────┬──────────────┐
-│ │ │ │
-│ SIDEBAR │ MAIN CONTENT │ AI CHAT │
-│ (15%) │ (55%) │ (30%) │
-│ │ │ │
-│ [Tool 1] │ Tool-specific interface │ Contextual │
-│ [Tool 2] │ changes based on │ chat with │
-│ [Tool 3] │ selected tool │ Gemini AI │
-│ │ │ │
+│              │                            │              │
+│   SIDEBAR    │        MAIN CONTENT        │    AI CHAT   │
+│    (15%)     │           (55%)            │     (30%)    │
+│              │                            │              │
+│  [Tool 1]    │ Tool-specific interface    │ Contextual   │
+│  [Tool 2]    │ changes based on           │ chat with    │
+│  [Tool 3]    │ selected tool              │ Gemini AI    │
+│              │                            │              │
 └──────────────┴────────────────────────────┴──────────────┘
+🚀 Getting Started
+Prerequisites
+Node.js 18.0 or higher
+npm or yarn package manager
+Google Gemini API Key (Get one here)
+Installation
+Clone the repository
 
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js** 18.0 or higher
-- **npm** or **yarn** package manager
-- **Google Gemini API Key** ([Get one here](https://ai.google.dev/))
-
-### Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yourusername/devforge-ai.git
-   cd devforge-ai
-## Install dependencies
 Bash
+
+git clone https://github.com/yourusername/devforge-ai.git
+cd devforge-ai
+Install dependencies
+
+Bash
+
 npm install
-## Set up environment variables
+# or
+yarn install
+Set up environment variables
+
 Bash
+
 cp .env.example .env.local
-## Start the development server
+Start the development server
+
 Bash
+
 npm run dev
-## Environment Variables
-Create a .env.local file in the root directory:
+# or
+yarn dev
+Open your browser
+
+text
+
+http://localhost:3000
+Environment Variables
+Create a .env.local file in the root directory (or edit the one copied from .env.example):
+
 env
+
 # Required
 GEMINI_API_KEY=your_gemini_api_key_here
+
 # Optional
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-## Open your browser
-text
-http://localhost:3000
