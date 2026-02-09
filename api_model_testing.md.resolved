@@ -1,0 +1,117 @@
+# 🔧 Gemini API Model Testing Guide
+
+## ✅ Current Configuration: Option 1 (gemini-3-flash)
+
+All 4 API files have been updated to use:
+```
+https://generativelanguage.googleapis.com/v1/models/gemini-3-flash:generateContent
+```
+
+**Files Updated:**
+- ✅ [app/api/chat/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/chat/route.ts)
+- ✅ [app/api/generate-code/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/generate-code/route.ts)
+- ✅ [app/api/review-code/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/review-code/route.ts)
+- ✅ [app/api/generate-docs/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/generate-docs/route.ts)
+
+---
+
+## 🧪 Testing Procedure
+
+### **Step 1: Restart Server**
+```bash
+# Stop current server: Ctrl+C in terminal
+# Then restart:
+npm run dev
+```
+
+### **Step 2: Test Chat**
+1. Open http://localhost:3001 (or whatever port it shows)
+2. Go to **Architecture Builder**
+3. Type in chat: **"Hello"**
+4. Wait for response
+
+### **Step 3: Check Result**
+
+**✅ SUCCESS:** Chat responds normally
+- You're done! gemini-3-flash works
+- Use this for your hackathon submission
+
+**❌ FAILURE:** Error message (400/404/500)
+- Try Option 2 (see below)
+
+---
+
+## 🔄 Fallback Options (If Option 1 Fails)
+
+### **Option 2: gemini-2.0-flash-exp (with /v1beta/)**
+
+If Option 1 fails, change all 4 files to:
+```typescript
+'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent'
+```
+
+Then restart and test again.
+
+### **Option 3: gemini-1.5-flash (Stable Fallback)**
+
+If Options 1 & 2 both fail, use:
+```typescript
+'https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent'
+```
+
+This is the most stable option and always works.
+
+---
+
+## 📝 Quick Find & Replace
+
+**Line Numbers:**
+- [app/api/chat/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/chat/route.ts) → Line 40
+- [app/api/generate-code/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/generate-code/route.ts) → Line 60
+- [app/api/review-code/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/review-code/route.ts) → Line 75
+- [app/api/generate-docs/route.ts](file:///d:/DevForge%20Ai%20Complete%20Project/app/api/generate-docs/route.ts) → Line 35
+
+**Search for:**
+```
+generativelanguage.googleapis.com
+```
+
+**Replace entire URL with one of the options above**
+
+---
+
+## 🎯 What to Claim in Hackathon
+
+- **Option 1 works:** "Using Gemini 3 Flash API"
+- **Option 2 works:** "Using Gemini 2.0 Flash Experimental API"
+- **Option 3 works:** "Using Gemini 1.5 Flash API" (still valid for hackathon)
+
+All are legitimate Gemini API models!
+
+---
+
+## ⚠️ Common Errors & Fixes
+
+**Error: "Port 3000 is in use"**
+- Normal! Server will use port 3001 instead
+- Just use the URL shown in terminal
+
+**Error: "Invalid API key"**
+- Check [.env](file:///d:/DevForge%20Ai%20Complete%20Project/.env) file has correct `GEMINI_API_KEY`
+- Verify key is active at https://makersuite.google.com/app/apikey
+
+**Error: 404 "Model not found"**
+- Model name doesn't exist yet
+- Try next option in the list
+
+**Error: 400 "Invalid request"**
+- Usually means wrong API version (/v1/ vs /v1beta/)
+- Try switching between them
+
+---
+
+## 🚀 Next Steps After Testing
+
+1. **Test chat** - Type "Hello" in Architecture Builder
+2. **If it works** - You're done! Start using the app
+3. **If it fails** - Let me know the exact error message and I'll help with the next option
