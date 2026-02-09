@@ -108,3 +108,52 @@
 ---
 
 ## 🏛 Architecture
+
+┌──────────────┬────────────────────────────┬──────────────┐
+│ │ │ │
+│ SIDEBAR │ MAIN CONTENT │ AI CHAT │
+│ (15%) │ (55%) │ (30%) │
+│ │ │ │
+│ [Tool 1] │ Tool-specific interface │ Contextual │
+│ [Tool 2] │ changes based on │ chat with │
+│ [Tool 3] │ selected tool │ Gemini AI │
+│ │ │ │
+└──────────────┴────────────────────────────┴──────────────┘
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** 18.0 or higher
+- **npm** or **yarn** package manager
+- **Google Gemini API Key** ([Get one here](https://ai.google.dev/))
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/devforge-ai.git
+   cd devforge-ai
+## Install dependencies
+Bash
+npm install
+## Set up environment variables
+Bash
+cp .env.example .env.local
+## Start the development server
+Bash
+npm run dev
+## Environment Variables
+Create a .env.local file in the root directory:
+env
+# Required
+GEMINI_API_KEY=your_gemini_api_key_here
+# Optional
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+## Open your browser
+text
+http://localhost:3000
